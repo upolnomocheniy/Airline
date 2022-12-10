@@ -1,10 +1,10 @@
-package org.example.testplane;
+package org.example;
 
 import org.example.utils.DeserializationData;
 
 import java.io.IOException;
 
-public class TestApp {
+public class App {
     public static void main(String[] args) throws IOException {
         DeserializationData deserializationData = new DeserializationData();
         deserializationData.readFile();
