@@ -23,11 +23,9 @@ public class AirplanesList {
         airplaneList = DeserializationData.readFile();
     }
 
-    public void showObj(List<Airplane> test) {
+    public void showObj(List<Airplane> airplanes) {
         System.out.println("Kvitka airlines");
-        test.forEach(
-                System.out::println
-        );
+        airplanes.forEach(System.out::println);
     }
 
     public long calculateTotalCapacity() {
@@ -43,15 +41,13 @@ public class AirplanesList {
     }
 
     public List<Airplane> sortAirplanesByFlightDistanceAsc() {
-        return airplaneList
-                .stream()
+        return airplaneList.stream()
                 .sorted(Comparator.comparing(Airplane::getFlightRange))
                 .collect(Collectors.toList());
     }
 
     public List<Airplane> sortAirplanesByFlightDistanceDesc() {
-        return airplaneList
-                .stream()
+        return airplaneList.stream()
                 .sorted(Comparator.comparing(Airplane::getFlightRange).reversed())
                 .collect(Collectors.toList());
     }
@@ -61,7 +57,6 @@ public class AirplanesList {
         if (fParam > sParam) {
             throw new IllegalArgumentException("First parameter can't be greater that second parameter");
         }
-
         return airplaneList.stream()
                 .filter(a -> a.getFlightRange() >= fParam && a.getFlightRange() < sParam)
                 .collect(Collectors.toList());
