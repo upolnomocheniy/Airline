@@ -3,7 +3,7 @@ package org.example.utils;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import org.example.plane.Airplane;
+import org.example.plane.dto.Airplane;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -14,7 +14,7 @@ import java.util.List;
 
 import static org.example.utils.ConfigProvider.getProperty;
 
-public class DeserializationData {
+public abstract class DeserializationData {
 
     public static final String PATH = getProperty("sourcePath");
     public static final String AIRPLANE_JSON_LIST = getProperty("sourceFile");

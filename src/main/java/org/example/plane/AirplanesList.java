@@ -1,6 +1,7 @@
 package org.example.plane;
 
 import lombok.Getter;
+import org.example.plane.dto.Airplane;
 import org.example.utils.DeserializationData;
 
 import java.io.IOException;
