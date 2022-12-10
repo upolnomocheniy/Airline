@@ -32,8 +32,6 @@ public class DeserializationData {
             System.out.println(e.getMessage());
         }
 
-        System.out.println(airplaneList);
-
         return airplaneList;
     }
 }

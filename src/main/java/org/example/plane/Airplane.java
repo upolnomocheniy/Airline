@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 import static com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         property = "type"

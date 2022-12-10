@@ -1,19 +1,103 @@
 [
   {
     "type": "Passenger airplane",
-    "id": "ifdgd4DF-4E",
-    "name": "boeing",
-    "model": "A360-1",
+    "id": "A290E98B9EA8",
+    "name": "Airbus",
+    "model": "A-320",
     "flightRange": 3000,
-    "fuelCapacity": 5000,
-    "loadCapacity": 9000,
+    "fuelCapacity": 4530,
+    "loadCapacity": 3000,
     "totalCapacity": 10000,
-    "numberOfPassengers": 250,
+    "numberOfPassengers": 186,
     "featuresForPassengers": [
       "WiFi",
       "Eats",
       "Drinks",
       "Voucher for next fly"
+    ]
+  },
+  {
+    "type": "Cargo airplane",
+    "id": "CF86D3942250",
+    "name": "Antonov",
+    "model": "AN-178",
+    "flightRange": 3680,
+    "fuelCapacity": 5000,
+    "loadCapacity": 18000,
+    "totalCapacity": 10000,
+    "presenceOfLoader": true,
+    "parcelSize": {
+      "maxHeight": 1000,
+      "maxWidth": 1000,
+      "maxLength": 1000
+    }
+  },
+  {
+    "type": "Cargo airplane",
+    "id": "CC35BC6B5195",
+    "name": "Airbus",
+    "model": "Beluga",
+    "flightRange": 3000,
+    "fuelCapacity": 20000,
+    "loadCapacity": 4300,
+    "totalCapacity": 10000,
+    "presenceOfLoader": true,
+    "parcelSize": {
+      "maxHeight": 1000,
+      "maxWidth": 1000,
+      "maxLength": 1000
+    }
+  },
+  {
+    "type": "Cargo airplane",
+    "id": "3513B1DDE591",
+    "name": "Antonov",
+    "model": "AN225-Mriya",
+    "flightRange": 15000,
+    "fuelCapacity": 365000,
+    "loadCapacity": 250000,
+    "totalCapacity": 10000,
+    "presenceOfLoader": true,
+    "parcelSize": {
+      "maxHeight": 1000,
+      "maxWidth": 1000,
+      "maxLength": 1000
+    }
+  },
+  {
+    "type": "Passenger airplane",
+    "id": "9C1C85EF3C5C",
+    "name": "Antonov",
+    "model": "AN-148-201",
+    "flightRange": 3480,
+    "fuelCapacity": 5000,
+    "loadCapacity": 3000,
+    "totalCapacity": 10000,
+    "numberOfPassengers": 186,
+    "featuresForPassengers": [
+      "WiFi",
+      "Eats",
+      "Drinks",
+      "Vegan foods"
+    ]
+  },
+  {
+    "type": "Passenger airplane",
+    "id": "21F2B837B609",
+    "name": "Boeing",
+    "model": "777-200LR",
+    "flightRange": 14446,
+    "fuelCapacity": 4662,
+    "loadCapacity": 3000,
+    "totalCapacity": 10000,
+    "numberOfPassengers": 186,
+    "featuresForPassengers": [
+      "WiFi",
+      "Eats",
+      "Drinks",
+      "Duty free zone",
+      "Alcohol drinks",
+      "Bonus+"
     ]
   }
 ]
