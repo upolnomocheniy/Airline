@@ -23,3 +23,6 @@
 hs_err_pid*
 # Project exclude paths
 /target/
+
+#idea files
+.idea/*
