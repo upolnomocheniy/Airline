@@ -6,20 +6,20 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class PassengerAirplane extends Airplane {
+public class CargoAirplane extends Airplane {
 
-    private String bd;
+    private String zubaKrut;
 
-    public PassengerAirplane(String test, String bd) {
+    public CargoAirplane(String test, String bd) {
         super(test);
-        this.bd = bd;
+        this.zubaKrut = bd;
     }
 
     @Override
     public String toString() {
-        return "Passenger airplane{ " +
+        return "Cargo airplane{ " +
                 "test='"+ super.getTest() + '\'' +
-                ", bd='" + bd + '\'' +
+                ", zubaKrut='" + zubaKrut + '\'' +
                 "}";
     }
 }

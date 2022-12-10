@@ -1,0 +1,12 @@
+[
+  {
+    "type": "Passenger airplane",
+    "test": "cars",
+    "bd": "10"
+  },
+  {
+    "type": "Cargo airplane",
+    "test": "cargo",
+    "zubaKrut": "zuba krut"
+  }
+]
