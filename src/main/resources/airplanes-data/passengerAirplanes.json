@@ -1,15 +1,12 @@
 [
   {
-    "id": "10",
-    "test": [
-      "test",
-      "zuva",
-      "kvit"
-    ],
-    "size": {
-      "height": "10",
-      "weight": "20",
-      "width": "14"
-    }
+    "type": "airplane",
+    "test": "cars",
+    "bd": "10"
+  },
+  {
+    "type": "airplane",
+    "test": "zuba krut",
+    "bd": "10"
   }
 ]
