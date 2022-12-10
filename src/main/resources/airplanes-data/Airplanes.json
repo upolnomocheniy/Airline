@@ -1,12 +1,19 @@
 [
   {
     "type": "Passenger airplane",
-    "test": "cars",
-    "bd": "10"
-  },
-  {
-    "type": "Cargo airplane",
-    "test": "cargo",
-    "zubaKrut": "zuba krut"
+    "id": "ifdgd4DF-4E",
+    "name": "boeing",
+    "model": "A360-1",
+    "flightRange": 3000,
+    "fuelCapacity": 5000,
+    "loadCapacity": 9000,
+    "totalCapacity": 10000,
+    "numberOfPassengers": 250,
+    "featuresForPassengers": [
+      "WiFi",
+      "Eats",
+      "Drinks",
+      "Voucher for next fly"
+    ]
   }
 ]

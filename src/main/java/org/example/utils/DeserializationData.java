@@ -1,8 +1,9 @@
 package org.example.utils;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import org.example.testplane.Airplane;
+import org.example.plane.Airplane;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,6 +21,7 @@ public class DeserializationData {
 
     public List<Airplane> readFile() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         List<Airplane> airplaneList = new ArrayList<>();
 
         try {
