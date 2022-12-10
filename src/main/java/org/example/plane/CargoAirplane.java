@@ -12,13 +12,14 @@ import lombok.NoArgsConstructor;
 public class CargoAirplane extends Airplane {
 
     private Boolean presenceOfLoader;
-    private ParcelSizeMax parcelSize;
+    private ParcelMaxParameters parcelMaxParameters;
 
     @Data
-    public static class ParcelSizeMax {
+    public static class ParcelMaxParameters {
         private Integer maxHeight;
         private Integer maxWidth;
         private Integer maxLength;
+        private Integer maxWeight;
     }
 
     @Override
@@ -30,9 +31,9 @@ public class CargoAirplane extends Airplane {
                 ", flightRange=" + super.getFlightRange() +
                 ", fuelCapacity=" + super.getFuelCapacity() +
                 ", loadCapacity=" + super.getLoadCapacity() +
-                ", totalCapacity=" + super.getTotalCapacity() +
+                ", totalCapacity=" + super.getCapacity() +
                 ", presenceOfLoader='" + presenceOfLoader + '\'' +
-                ", parcel='" + parcelSize.toString() + '\'' +
+                ", parcel='" + parcelMaxParameters.toString() + '\'' +
                 '}';
     }
 }

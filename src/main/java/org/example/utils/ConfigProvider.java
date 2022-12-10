@@ -7,9 +7,10 @@ import java.util.Properties;
 
 public class ConfigProvider {
     private static final Properties properties = new Properties();
+    public static final String PATH_TO_PROPERTY = "src/main/resources/configuration/parameters.properties";
 
     static {
-        try (InputStream input = new FileInputStream("src/main/resources/configuration/parameters.properties")) {
+        try (InputStream input = new FileInputStream(PATH_TO_PROPERTY)) {
             properties.load(input);
         } catch (IOException ex) {
             ex.printStackTrace();

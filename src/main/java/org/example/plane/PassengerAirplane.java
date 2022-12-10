@@ -13,7 +13,6 @@ import java.util.List;
 @NoArgsConstructor
 public class PassengerAirplane extends Airplane {
 
-    private Integer numberOfPassengers;
     private List<String> featuresForPassengers;
 
     @Override
@@ -25,8 +24,7 @@ public class PassengerAirplane extends Airplane {
                 ", flightRange=" + super.getFlightRange() +
                 ", fuelCapacity=" + super.getFuelCapacity() +
                 ", loadCapacity=" + super.getLoadCapacity() +
-                ", totalCapacity=" + super.getTotalCapacity() +
-                ", numberOfPassengers='" + numberOfPassengers + '\'' +
+                ", totalCapacity=" + super.getCapacity() +
                 ", featuresForPassengers='" + featuresForPassengers + '\'' +
                 '}';
     }

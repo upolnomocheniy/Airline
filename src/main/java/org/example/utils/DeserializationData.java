@@ -19,7 +19,7 @@ public class DeserializationData {
     public static final String PATH = getProperty("sourcePath");
     public static final String AIRPLANE_JSON_LIST = getProperty("sourceFile");
 
-    public List<Airplane> readFile() throws IOException {
+    public static List<Airplane> readFile() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         List<Airplane> airplaneList = new ArrayList<>();
