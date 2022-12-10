@@ -1,20 +1,20 @@
 package org.example;
 
-import org.example.plane.Airplane;
-import org.example.utils.DeserializationData;
-
+import org.example.plane.AirplanesList;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Stream;
 
 public class App {
     public static void main(String[] args) throws IOException {
 
-        DeserializationData deserializationData = new DeserializationData();
-        List<Airplane> airplaneList = deserializationData.readFile();
+        AirplanesList airplanesList = new AirplanesList();
+        airplanesList.fillListWithContent();
+        airplanesList.showObj(airplanesList.getAirplaneList());
+        System.out.println("Total capacity: " + airplanesList.calculateTotalCapacity());
+        System.out.println("Total load capacity: " + airplanesList.calculateTotalLoadCapacity());
 
-        airplaneList.forEach(System.out::println);
+        airplanesList.showObj(airplanesList.sortAirplanesByFlightDistanceDesc());
+
+        airplanesList.showObj(airplanesList.searchAirplaneByFlightDistance(10000, 5000));
+
     }
 }

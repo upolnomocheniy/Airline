@@ -7,8 +7,7 @@
     "flightRange": 3000,
     "fuelCapacity": 4530,
     "loadCapacity": 3000,
-    "totalCapacity": 10000,
-    "numberOfPassengers": 186,
+    "capacity": 10000,
     "featuresForPassengers": [
       "WiFi",
       "Eats",
@@ -24,12 +23,13 @@
     "flightRange": 3680,
     "fuelCapacity": 5000,
     "loadCapacity": 18000,
-    "totalCapacity": 10000,
+    "capacity": 10000,
     "presenceOfLoader": true,
-    "parcelSize": {
+    "parcelMaxParameters": {
       "maxHeight": 1000,
       "maxWidth": 1000,
-      "maxLength": 1000
+      "maxLength": 1000,
+      "maxWeight": 100
     }
   },
   {
@@ -40,12 +40,13 @@
     "flightRange": 3000,
     "fuelCapacity": 20000,
     "loadCapacity": 4300,
-    "totalCapacity": 10000,
+    "capacity": 10000,
     "presenceOfLoader": true,
-    "parcelSize": {
+    "parcelMaxParameters": {
       "maxHeight": 1000,
       "maxWidth": 1000,
-      "maxLength": 1000
+      "maxLength": 1000,
+      "maxWeight": 100
     }
   },
   {
@@ -56,12 +57,13 @@
     "flightRange": 15000,
     "fuelCapacity": 365000,
     "loadCapacity": 250000,
-    "totalCapacity": 10000,
+    "capacity": 10000,
     "presenceOfLoader": true,
-    "parcelSize": {
+    "parcelMaxParameters": {
       "maxHeight": 1000,
       "maxWidth": 1000,
-      "maxLength": 1000
+      "maxLength": 1000,
+      "maxWeight": 100
     }
   },
   {
@@ -72,8 +74,7 @@
     "flightRange": 3480,
     "fuelCapacity": 5000,
     "loadCapacity": 3000,
-    "totalCapacity": 10000,
-    "numberOfPassengers": 186,
+    "capacity": 10000,
     "featuresForPassengers": [
       "WiFi",
       "Eats",
@@ -89,8 +90,7 @@
     "flightRange": 14446,
     "fuelCapacity": 4662,
     "loadCapacity": 3000,
-    "totalCapacity": 10000,
-    "numberOfPassengers": 186,
+    "capacity": 10000,
     "featuresForPassengers": [
       "WiFi",
       "Eats",

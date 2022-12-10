@@ -26,5 +26,5 @@ public abstract class Airplane {
     private Integer flightRange;
     private Integer fuelCapacity;
     private Integer loadCapacity;
-    private Integer totalCapacity;
+    private Integer capacity;
 }
