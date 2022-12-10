@@ -1,36 +1,20 @@
 package org.example.plane;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-
 @Data
+@EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
 @NoArgsConstructor
 public class PassengerAirplane extends Airplane {
 
     private Integer numberOfPassengers;
     private List<String> featuresForPassengers;
-
-    public PassengerAirplane(Integer numberOfPassengers, List<String> featuresForPassengers) {
-        this.numberOfPassengers = numberOfPassengers;
-        this.featuresForPassengers = featuresForPassengers;
-    }
-
-    public PassengerAirplane(String id,
-                             String name,
-                             String model,
-                             Integer flightRange,
-                             Integer fuelCapacity,
-                             Integer loadCapacity,
-                             Integer totalCapacity,
-                             Integer numberOfPassengers,
-                             List<String> featuresForPassengers) {
-        super(id, name, model, flightRange, fuelCapacity, loadCapacity, totalCapacity);
-        this.numberOfPassengers = numberOfPassengers;
-        this.featuresForPassengers = featuresForPassengers;
-    }
 
     @Override
     public String toString() {
