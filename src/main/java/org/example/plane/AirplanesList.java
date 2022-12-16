@@ -1,6 +1,7 @@
 package org.example.plane;
 
 import lombok.Getter;
+import org.example.exception.ForbiddenOperationException;
 import org.example.plane.dto.Airplane;
 import org.example.utils.DeserializationData;
 
@@ -36,18 +37,21 @@ public class AirplanesList {
 
     public long calculateTotalLoadCapacity() {
         return airplaneList.stream()
+                .filter(airplane -> airplane.getLoadCapacity() != null)
                 .mapToLong(Airplane::getLoadCapacity)
                 .sum();
     }
 
     public List<Airplane> sortAirplanesByFlightDistanceAsc() {
         return airplaneList.stream()
+                .filter(airplane -> airplane.getFlightRange() != null)
                 .sorted(Comparator.comparing(Airplane::getFlightRange))
                 .collect(Collectors.toList());
     }
 
     public List<Airplane> sortAirplanesByFlightDistanceDesc() {
         return airplaneList.stream()
+                .filter(airplane -> airplane.getFlightRange() != null)
                 .sorted(Comparator.comparing(Airplane::getFlightRange).reversed())
                 .collect(Collectors.toList());
     }
@@ -55,10 +59,19 @@ public class AirplanesList {
     public List<Airplane> searchAirplaneByFlightDistance(int fParam, int sParam) {
 
         if (fParam > sParam) {
-            throw new IllegalArgumentException("First parameter can't be greater that second parameter");
+            throw new ForbiddenOperationException("Forbidden operation because first parameter can't be greater that second parameter");
         }
+
         return airplaneList.stream()
+                .filter(airplane -> {
+                    if (airplane.getFlightRange() == null) {
+                        throw new IllegalArgumentException("Check please flight range data for diapasone of sort");
+                    }
+                    return true;
+                })
                 .filter(a -> a.getFlightRange() >= fParam && a.getFlightRange() < sParam)
                 .collect(Collectors.toList());
     }
 }
+
+

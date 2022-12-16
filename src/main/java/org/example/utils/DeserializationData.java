@@ -3,6 +3,7 @@ package org.example.utils;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+import org.example.exception.NoSuchRecordsException;
 import org.example.plane.dto.Airplane;
 
 import java.io.File;
@@ -21,15 +22,19 @@ public abstract class DeserializationData {
 
     public static List<Airplane> readFile() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true);
         List<Airplane> airplaneList = new ArrayList<>();
 
         try {
             airplaneList = Arrays.asList(mapper.readValue(new File(PATH + AIRPLANE_JSON_LIST), Airplane[].class));
         } catch (FileNotFoundException e) {
-            System.out.println("FIle not found in system");
+            System.out.println("File not found in system");
         } catch (InvalidFormatException e) {
             System.out.println(e.getMessage());
+        }
+
+        if (airplaneList.isEmpty()) {
+            throw new NoSuchRecordsException("No Record found for airplane");
         }
 
         return airplaneList;
