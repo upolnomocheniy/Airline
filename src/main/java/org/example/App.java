@@ -8,16 +8,12 @@ public class App {
     public static void main(String[] args) throws IOException {
 
         AirplanesList airplanesList = new AirplanesList();
-
         airplanesList.fillListWithContent();
-        airplanesList.showObj(airplanesList.getAirplaneList());
 
-        System.out.println("Total capacity: " + airplanesList.calculateTotalCapacity());
-        System.out.println("Total load capacity: " + airplanesList.calculateTotalLoadCapacity());
-
-        airplanesList.showObj(airplanesList.sortAirplanesByFlightDistanceDesc());
-
-        airplanesList.showObj(airplanesList.searchAirplaneByFlightDistance(10, 5000));
-
+        System.out.println("1. List of airplanes: \n" + airplanesList);
+        System.out.println("2. Total capacity: " + airplanesList.calculateTotalCapacity());
+        System.out.println("3. Total load capacity: " + airplanesList.calculateTotalLoadCapacity());
+        System.out.println("4. After sorting by flight distance:\n" + airplanesList.sortAirplanesByFlightDistanceDesc());
+        System.out.println("5. Search airplanes with criteria: \n" + airplanesList.searchAirplanesByFlightDistance(3, 1));
     }
 }

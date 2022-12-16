@@ -12,8 +12,8 @@ public class ConfigProvider {
     static {
         try (InputStream input = new FileInputStream(PATH_TO_PROPERTY)) {
             properties.load(input);
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

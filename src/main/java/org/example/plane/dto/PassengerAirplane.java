@@ -26,6 +26,6 @@ public class PassengerAirplane extends Airplane {
                 ", loadCapacity=" + super.getLoadCapacity() +
                 ", totalCapacity=" + super.getCapacity() +
                 ", featuresForPassengers='" + featuresForPassengers + '\'' +
-                '}';
+                '}' + '\n';
     }
 }

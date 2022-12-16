@@ -34,6 +34,6 @@ public class CargoAirplane extends Airplane {
                 ", totalCapacity=" + super.getCapacity() +
                 ", presenceOfLoader='" + presenceOfLoader + '\'' +
                 ", parcel='" + parcelMaxParameters.toString() + '\'' +
-                '}';
+                '}' + "\n";
     }
 }
