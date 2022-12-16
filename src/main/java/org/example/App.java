@@ -2,10 +2,8 @@ package org.example;
 
 import org.example.plane.AirplanesList;
 
-import java.io.IOException;
-
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         AirplanesList airplanesList = new AirplanesList();
         airplanesList.fillListWithContent();
@@ -15,7 +13,7 @@ public class App {
         System.out.println("3. Total load capacity: " + airplanesList.calculateTotalLoadCapacity());
         System.out.println("4. After sorting by flight distance:\n" + airplanesList.sortAirplanesByFlightDistanceDesc());
         System.out.println("5. Search airplanes with criteria: \n" + airplanesList.searchAirplanesByFlightDistance(0, 5000));
-        System.out.println("6. Search light cargo jets: \n" + airplanesList.searchLightCargoAirplanes());
+        System.out.println("6. Search light cargo jets from the all list: \n" + airplanesList.searchLightCargoAirplanes());
         System.out.println("7. Search passenger jets(include light jets version): \n" + airplanesList.searchPassengerAirplaneWithParameterForFeature("Eats"));
 
     }
