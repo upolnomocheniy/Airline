@@ -101,7 +101,7 @@
     ]
   },
   {
-    "type": "Corporative Jet",
+    "type": "Corporative airplane",
     "id": "21F2B8GGF4554",
     "name": "Airbus",
     "model": "ACJ350-900",
@@ -119,8 +119,8 @@
     ]
   },
   {
-    "type": "Corporative Jet",
-    "id": "2FF55F4554",
+    "type": "Corporative airplane",
+    "id": "df81e944961c",
     "name": "Airbus",
     "model": "ACJ319neo",
     "flightRange": 2446,
@@ -136,5 +136,39 @@
       "Alcohol free",
       "Bonus VIP"
     ]
+  },
+  {
+    "type": "Light cargo airplane",
+    "id": "22780b1c0697",
+    "name": "Antonov",
+    "model": "AN-2 Kukuruznik",
+    "flightRange": 1000,
+    "fuelCapacity": 10000,
+    "loadCapacity": 1000,
+    "capacity": 2000,
+    "presenceOfLoader": false,
+    "parcelMaxParameters": {
+      "maxHeight": 500,
+      "maxWidth": 500,
+      "maxLength": 500,
+      "maxWeight": 60
+    }
+  },
+  {
+    "type": "Light cargo airplane",
+    "id": "207f33df3ff",
+    "name": "Antonov",
+    "model": "AN-132",
+    "flightRange": 15000,
+    "fuelCapacity": 365000,
+    "loadCapacity": 250000,
+    "capacity": 10000,
+    "presenceOfLoader": false,
+    "parcelMaxParameters": {
+      "maxHeight": 700,
+      "maxWidth": 700,
+      "maxLength": 700,
+      "maxWeight": 100
+    }
   }
 ]

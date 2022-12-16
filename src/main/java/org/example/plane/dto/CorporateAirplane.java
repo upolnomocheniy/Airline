@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class CorporativeJet extends PassengerAirplane{
+public class CorporateAirplane extends PassengerAirplane{
     @Override
     public String toString() {
         return "CorporativeAirplane{" +
