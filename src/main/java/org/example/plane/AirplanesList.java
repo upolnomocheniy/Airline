@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import org.example.exception.ForbiddenOperationException;
 import org.example.exception.ParametersOperationException;
 import org.example.plane.dto.Airplane;
+import org.example.plane.dto.LightCargoAirplane;
+import org.example.plane.dto.PassengerAirplane;
 import org.example.utils.DeserializationData;
 
 import java.io.IOException;
@@ -18,7 +20,7 @@ import static java.util.Objects.isNull;
 @NoArgsConstructor
 public class AirplanesList {
 
-    List<Airplane> airplaneList;
+    List<? extends Airplane> airplaneList;
 
     public void fillListWithContent() throws IOException {
         airplaneList = DeserializationData.readFile();
@@ -38,13 +40,6 @@ public class AirplanesList {
                 .sum();
     }
 
-    public List<Airplane> sortAirplanesByFlightDistanceAsc() {
-        return airplaneList.stream()
-                .filter(airplane -> checkNullAndNegativeValueInObject(airplane.getFlightRange(), "flightRange"))
-                .sorted(Comparator.comparing(Airplane::getFlightRange))
-                .collect(Collectors.toList());
-    }
-
     public List<Airplane> sortAirplanesByFlightDistanceDesc() {
         return airplaneList.stream()
                 .filter(airplane -> checkNullAndNegativeValueInObject(airplane.getFlightRange(), "flightRange"))
@@ -60,10 +55,24 @@ public class AirplanesList {
         if (fParam > sParam) {
             throw new ParametersOperationException("Forbidden operation because first parameter can't be greater that second parameter");
         }
-
         return airplaneList.stream()
                 .filter(airplane -> checkNullAndNegativeValueInObject(airplane.getFlightRange(), "flightRange"))
                 .filter(a -> a.getFlightRange() >= fParam && a.getFlightRange() < sParam)
+                .collect(Collectors.toList());
+    }
+
+    public List<LightCargoAirplane> searchLightCargoAirplanes() {
+        return airplaneList.stream()
+                .filter(LightCargoAirplane.class::isInstance)
+                .map(LightCargoAirplane.class::cast)
+                .collect(Collectors.toList());
+    }
+
+    public List<PassengerAirplane> searchPassengerAirplaneWithParameterForFeature(String parameter) {
+        return airplaneList.stream()
+                .filter(PassengerAirplane.class::isInstance)
+                .map(PassengerAirplane.class::cast)
+                .filter(passengerAirplane -> passengerAirplane.getFeaturesForPassengers().contains(parameter))
                 .collect(Collectors.toList());
     }
 
