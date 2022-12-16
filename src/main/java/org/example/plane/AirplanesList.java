@@ -9,7 +9,6 @@ import org.example.plane.dto.LightCargoAirplane;
 import org.example.plane.dto.PassengerAirplane;
 import org.example.utils.DeserializationData;
 
-import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,23 +19,23 @@ import static java.util.Objects.isNull;
 @NoArgsConstructor
 public class AirplanesList {
 
-    List<? extends Airplane> airplaneList;
+    List<Airplane> airplaneList;
 
-    public void fillListWithContent() throws IOException {
+    public void fillListWithContent() {
         airplaneList = DeserializationData.readFile();
     }
 
-    public long calculateTotalCapacity() {
+    public int calculateTotalCapacity() {
         return airplaneList.stream()
                 .filter(airplane -> checkNullAndNegativeValueInObject(airplane.getCapacity(), "capacity"))
-                .mapToLong(Airplane::getCapacity)
+                .mapToInt(Airplane::getCapacity)
                 .sum();
     }
 
-    public long calculateTotalLoadCapacity() {
+    public int calculateTotalLoadCapacity() {
         return airplaneList.stream()
                 .filter(airplane -> checkNullAndNegativeValueInObject(airplane.getLoadCapacity(), "loadCapacity"))
-                .mapToLong(Airplane::getLoadCapacity)
+                .mapToInt(Airplane::getLoadCapacity)
                 .sum();
     }
 
