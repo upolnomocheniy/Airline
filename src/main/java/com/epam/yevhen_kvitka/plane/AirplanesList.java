@@ -1,13 +1,13 @@
-package org.example.plane;
+package com.epam.yevhen_kvitka.plane;
 
+import com.epam.yevhen_kvitka.exception.ForbiddenOperationException;
+import com.epam.yevhen_kvitka.exception.ParametersOperationException;
+import com.epam.yevhen_kvitka.plane.dto.Airplane;
+import com.epam.yevhen_kvitka.plane.dto.PassengerAirplane;
+import com.epam.yevhen_kvitka.utils.DeserializationData;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.example.exception.ForbiddenOperationException;
-import org.example.exception.ParametersOperationException;
-import org.example.plane.dto.Airplane;
-import org.example.plane.dto.LightCargoAirplane;
-import org.example.plane.dto.PassengerAirplane;
-import org.example.utils.DeserializationData;
+import com.epam.yevhen_kvitka.plane.dto.LightCargoAirplane;
 
 import java.util.Comparator;
 import java.util.List;

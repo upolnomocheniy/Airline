@@ -1,23 +1,14 @@
-package org.example.plane.dto;
+package com.epam.yevhen_kvitka.plane.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Data
-@EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
-@NoArgsConstructor
-public class PassengerAirplane extends Airplane {
-
-    private List<String> featuresForPassengers;
-
+public class LightCargoAirplane extends CargoAirplane{
     @Override
     public String toString() {
-        return "PassengerAirplane{" +
+        return "LightCargoAirplane{" +
                 "id='" + super.getId() + '\'' +
                 ", name='" + super.getName() + '\'' +
                 ", model='" + super.getModel() + '\'' +
@@ -25,7 +16,8 @@ public class PassengerAirplane extends Airplane {
                 ", fuelCapacity=" + super.getFuelCapacity() +
                 ", loadCapacity=" + super.getLoadCapacity() +
                 ", totalCapacity=" + super.getCapacity() +
-                ", featuresForPassengers='" + featuresForPassengers + '\'' +
-                '}' + '\n';
+                ", presenceOfLoader='" + super.getPresenceOfLoader() + '\'' +
+                ", parcel='" + super.getParcelMaxParameters().toString() + '\'' +
+                '}' + "\n";
     }
 }

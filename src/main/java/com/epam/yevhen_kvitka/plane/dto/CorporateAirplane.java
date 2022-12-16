@@ -1,4 +1,4 @@
-package org.example.plane.dto;
+package com.epam.yevhen_kvitka.plane.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

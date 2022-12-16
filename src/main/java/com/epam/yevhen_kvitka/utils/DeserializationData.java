@@ -1,12 +1,12 @@
-package org.example.utils;
+package com.epam.yevhen_kvitka.utils;
 
+import com.epam.yevhen_kvitka.exception.NoSuchRecordsException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
-import org.example.exception.NoSuchRecordsException;
-import org.example.plane.dto.Airplane;
+import com.epam.yevhen_kvitka.plane.dto.Airplane;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.example.utils.ConfigProvider.getProperty;
+import static com.epam.yevhen_kvitka.utils.ConfigProvider.getProperty;
 
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)

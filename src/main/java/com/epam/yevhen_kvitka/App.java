@@ -1,6 +1,6 @@
-package org.example;
+package com.epam.yevhen_kvitka;
 
-import org.example.plane.AirplanesList;
+import com.epam.yevhen_kvitka.plane.AirplanesList;
 
 public class App {
     public static void main(String[] args) {

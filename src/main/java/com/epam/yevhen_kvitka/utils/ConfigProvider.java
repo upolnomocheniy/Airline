@@ -1,4 +1,4 @@
-package org.example.utils;
+package com.epam.yevhen_kvitka.utils;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
