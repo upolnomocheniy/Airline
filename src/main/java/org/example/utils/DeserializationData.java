@@ -2,7 +2,6 @@ package org.example.utils;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import org.example.exception.NoSuchRecordsException;
 import org.example.plane.dto.Airplane;

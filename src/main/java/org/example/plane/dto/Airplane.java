@@ -13,7 +13,8 @@ import static com.fasterxml.jackson.annotation.JsonSubTypes.Type;
 )
 @JsonSubTypes({
         @Type(value = PassengerAirplane.class, name = "Passenger airplane"),
-        @Type(value = CargoAirplane.class, name = "Cargo airplane")
+        @Type(value = CargoAirplane.class, name = "Cargo airplane"),
+        @Type(value = CorporativeJet.class, name = "Corporative Jet")
 })
 public abstract class Airplane {
     private String id;

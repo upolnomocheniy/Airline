@@ -14,6 +14,6 @@ public class App {
         System.out.println("2. Total capacity: " + airplanesList.calculateTotalCapacity());
         System.out.println("3. Total load capacity: " + airplanesList.calculateTotalLoadCapacity());
         System.out.println("4. After sorting by flight distance:\n" + airplanesList.sortAirplanesByFlightDistanceDesc());
-        System.out.println("5. Search airplanes with criteria: \n" + airplanesList.searchAirplanesByFlightDistance(3, 1));
+        System.out.println("5. Search airplanes with criteria: \n" + airplanesList.searchAirplanesByFlightDistance(0, 5000));
     }
 }

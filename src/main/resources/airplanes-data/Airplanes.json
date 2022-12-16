@@ -99,5 +99,42 @@
       "Alcohol drinks",
       "Bonus+"
     ]
+  },
+  {
+    "type": "Corporative Jet",
+    "id": "21F2B8GGF4554",
+    "name": "Airbus",
+    "model": "ACJ350-900",
+    "flightRange": 2446,
+    "loadCapacity": 3000,
+    "fuelCapacity": 2662,
+    "capacity": 5000,
+    "featuresForPassengers": [
+      "WiFi",
+      "Eats",
+      "Drinks",
+      "Duty free zone",
+      "Alcohol free",
+      "Bonus VIP+"
+    ]
+  },
+  {
+    "type": "Corporative Jet",
+    "id": "2FF55F4554",
+    "name": "Airbus",
+    "model": "ACJ319neo",
+    "flightRange": 2446,
+    "loadCapacity": 3000,
+    "fuelCapacity": 2662,
+    "capacity": 5000,
+    "featuresForPassengers": [
+      "WiFi",
+      "Bad",
+      "Shower",
+      "Kitchen",
+      "Duty free zone",
+      "Alcohol free",
+      "Bonus VIP"
+    ]
   }
 ]

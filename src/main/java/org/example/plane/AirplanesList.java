@@ -1,13 +1,13 @@
 package org.example.plane;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.example.exception.ForbiddenOperationException;
 import org.example.exception.ParametersOperationException;
 import org.example.plane.dto.Airplane;
 import org.example.utils.DeserializationData;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,13 +15,10 @@ import java.util.stream.Collectors;
 import static java.util.Objects.isNull;
 
 @Getter
+@NoArgsConstructor
 public class AirplanesList {
 
     List<Airplane> airplaneList;
-
-    public AirplanesList() {
-        airplaneList = new ArrayList<>();
-    }
 
     public void fillListWithContent() throws IOException {
         airplaneList = DeserializationData.readFile();
@@ -65,11 +62,7 @@ public class AirplanesList {
         }
 
         return airplaneList.stream()
-                .filter(airplane -> {
-                    if (isNull(airplane.getFlightRange()))
-                        throw new ForbiddenOperationException("Check please flight range values for criteria of sort");
-                    return true;
-                })
+                .filter(airplane -> checkNullAndNegativeValueInObject(airplane.getFlightRange(), "flightRange"))
                 .filter(a -> a.getFlightRange() >= fParam && a.getFlightRange() < sParam)
                 .collect(Collectors.toList());
     }
